@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_net_error"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@drawable/chat_error_item_bg"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_marginLeft="9dp"
+            android:id="@+id/iv_neterror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login_error_icon"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/tv_connect_errormsg"
+            android:layout_marginLeft="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="不能连接到服务器"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/iv_neterror"
+            />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,52 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:actionOverflowButtonStyle"> @style/weiXinOverflowStyle</item>
+    </style>
+    <style name="weiXinOverflowStyle">
+        <item name="android:src">@drawable/actionbar_add_icon</item>
+    </style>
+
+    <style name="chat_text_date_style">
+        <item name="android:padding">2dp</item>
+        <item name="android:paddingTop">2dip</item>
+        <item name="android:paddingBottom">2dip</item>
+        <item name="android:paddingLeft">12dip</item>
+        <item name="android:paddingRight">12dip</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/timestampe_bg</item>
+    </style>
+
+    <style name="chat_content_date_style">
+        <item name="android:minHeight">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">#bfbfbf</item>
+    </style>
+
+    <style name="chat_text_name_style">
+        <item name="android:textColor">#818181</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- android:windowBackground换窗口默认背景-->
+    <!--  android:windowFrame设置Dialog的windowFrame框为无（去掉白色边框）-->
+    <!-- ndroid:windowIsFloating是否浮现在activity之上-->
+    <!--  android:windowIsTranslucent是否半透明-->
+    <!-- android:backgroundDimEnabled背景是否模糊显示-->
+    <style name="theme_audio_dialog" parent="@android:style/Theme.Dialog"><!--自定义对话框风格-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+</resources>

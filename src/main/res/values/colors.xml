@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="tab_text_select">#0dd21d</color>
+    <color name="tab_text_normal">#9A9A9A</color>
+    <color name="contact_fragment_text">#353535</color>
+    <color name="item_press">#dddddd</color>
+    <color name="item_normal">#ffffff</color>
+    <color name="top_bar">#232325</color>
+    <color name="greeny">#0dd21d</color>
+    <color name="error_item_color">#F6EBE6</color>
+    <color name="btn_gray_normal">#c0c0c0</color>
+</resources>

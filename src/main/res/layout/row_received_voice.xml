@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="13dp" >
+
+    <TextView
+        android:id="@+id/timestamp_recvoc"
+        style="@style/chat_text_date_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_chat_activity" >
+
+        <ImageView
+            android:id="@+id/iv_avatar_recvoc"
+            android:layout_width="@dimen/size_avatar"
+            android:layout_height="@dimen/size_avatar"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/default_useravatar"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_voice_recvoc"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_avatar_recvoc"
+            android:background="@drawable/chatfrom_bg"
+            android:clickable="true"
+            android:src="@drawable/chatfrom_voice_playing" />
+
+        <TextView
+            android:id="@+id/tv_length_recvoc"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_voice_recvoc"
+            android:gravity="center"
+            android:text="3&apos;&apos;"
+            android:layout_marginTop="15dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_unread_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_length_recvoc"
+            android:src="@drawable/unread_dot"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_username_recvoc"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/iv_avatar_recvoc"
+            android:layout_toLeftOf="@id/iv_voice_recvoc" />
+    </RelativeLayout>
+
+</LinearLayout>

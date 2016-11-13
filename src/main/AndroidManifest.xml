@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.aaron.wechat">
+
+    <!-- 基础模块（必须加入以下声明）START -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 基础模块 END -->
+
+    <application
+        android:allowBackup="true"
+        android:name=".WeChatApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"
+            android:launchMode="singleTask"
+            >
+
+        </activity>
+        <activity android:name=".SignUpActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+
+        </activity>
+        <activity android:name=".SignInActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ForgetPswActivity" />
+        <activity android:name=".AddFriendActivity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".UserInfoActivity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
+        <activity android:name=".ContactInfoActivity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".ChatActivity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".ProfileActivity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                  />
+        <activity android:name=".EditProfileActivity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+                  />
+        <activity android:name=".EditRegionActivity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            />
+        <activity android:name=".EditSignActivity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            />
+        <activity android:name=".ChangeBeizhuActivity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            />
+        <activity android:name=".ImageActivity"
+                  android:theme="@android:style/Theme.Holo.Light.NoActionBar"
+            />
+
+
+        <!-- 实时通信模块、推送（若使用该功能，需添加以下声明）START -->
+        <service android:name="com.avos.avoscloud.PushService"/>
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- 实时通信模块、推送 END -->
+        <service android:name="com.aaron.service.WeChatService"/>
+    </application>
+
+</manifest>
